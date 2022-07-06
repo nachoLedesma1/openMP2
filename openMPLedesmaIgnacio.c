@@ -172,7 +172,7 @@ main(int argc, char **argv){
             int ran;
             Salud vecino;
             #pragma omp parallel num_threads(16) 
-            {
+            //{
             #pragma omp parallel for private (vecino, cantVecin)
             for(int i = 0; i<cantCelReal; i++){
                 for(int j = 0; j<cantCelReal; j++){
@@ -611,7 +611,7 @@ main(int argc, char **argv){
             matris = matris2;
             matris2 = aux;
 
-            }//del numero de threat          
+           // }//del numero de threat          
         }//for t= tiempo de vida       
     
         //para probar no hay que imprimir nada
